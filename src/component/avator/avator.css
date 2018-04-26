@@ -1,0 +1,15 @@
+.avator-container {
+  line-height: 21px;
+  background-color: #fff;
+}
+
+.avator-container .avator-img {
+  width: 21px;
+  height: 21px;
+  vertical-align: middle;
+}
+
+.avator-container .avator-username {
+  font-size: 12px;
+  vertical-align: middle;
+}
