@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { WingBlank, Card, WhiteSpace } from 'antd-mobile'
+import {WingBlank, Card, WhiteSpace } from 'antd-mobile'
 
 class BossList extends React.Component {
   constructor (props) {

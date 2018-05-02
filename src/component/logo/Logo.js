@@ -1,10 +1,10 @@
 import React from 'react'
-
+import './logo.css'
 class Logo extends React.Component {
   render () {
     return (
-      <div>
-        老子是logo
+      <div className="logo-container">
+        <img className="logo-img" src={require('./imgs/people.jpg')}/>
       </div>
     )
   }

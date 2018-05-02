@@ -22,7 +22,7 @@ function login (loginData) {
     axios.post('/user/login', loginData).then(function (response) {
        let data = response.data
        if (data.code === 0) {
-         dispatch({type: USER_INFO, payload: data.data})
+         dispatch({type: USER_INFO, payload: data.data, redirectUrl: '/dashboard'})
        }    
     })
   }

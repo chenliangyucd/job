@@ -5,6 +5,7 @@ import { Route, Switch} from 'react-router-dom'
 import Message from '../message/Message'
 import GeniusList from '../geniuslist/GeniusList'
 import BossList from '../bosslist/BossList'
+import User from '../user/User'
 import RedirectUrl from '../../component/redirect/RedirectUrl'
 import './dashboard.css'
 
@@ -62,6 +63,7 @@ class Dashboard extends React.Component {
           ]}
         >导航栏</NavBar>
         <Route path='/dashboard/message' component={Message}></Route>
+        <Route path='/dashboard/user' component={User}></Route>
         {this.props.user.type === 0? <Route path='/dashboard/bosslist' component={BossList}></Route>:<Route path='/dashboard/geniuslist' component={GeniusList}></Route>}
        
        

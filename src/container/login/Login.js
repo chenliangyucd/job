@@ -4,6 +4,7 @@ import { List, InputItem, Button, WhiteSpace} from 'antd-mobile'
 import Logo from '../../component/logo/Logo'
 import {login} from '../../redux/user.redux'
 import RedirectUrl from '../../component/redirect/RedirectUrl'
+import './login.css'
 
 const Item = List.Item
 
@@ -29,19 +30,17 @@ class Login extends React.Component {
   render () {
     return (
       <div>
-        <RedirectUrl needRedirect={false} redirectUrl=''></RedirectUrl>
+        <RedirectUrl needRedirect={true} redux="user"></RedirectUrl>
         <Logo></Logo>
         <List>
-          <Item>
-            <InputItem onChange={(value)=> {this.changeState('user', value)}}>用户名</InputItem>
-          </Item>
-          <Item>
-            <InputItem type='password' onChange={(value)=> {this.changeState('pwd', value)}}>密码</InputItem>
-          </Item>
+          <InputItem onChange={(value)=> {this.changeState('user', value)}}>用户名</InputItem>
+          <InputItem type='password' onChange={(value)=> {this.changeState('pwd', value)}}>密码</InputItem>
         </List>
-        <Button type="primary" onClick={this.loginUser}>点击登陆</Button>
         <WhiteSpace/>
-        <Button type="primary" onClick={()=>{this.props.history.push('/register')}}>跳转到注册页面</Button>
+        <div className="login-btn-container">
+          <Button type="primary" size="small" onClick={this.loginUser} className="login-btn">点击登陆</Button>
+          <Button type="primary" size="small" onClick={()=>{this.props.history.push('/register')}} className="login-btn">点击注册</Button>
+        </div>
       </div>
     )
   }

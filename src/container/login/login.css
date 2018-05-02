@@ -1,0 +1,12 @@
+.login-btn-container {
+  text-align: center;
+}
+
+.login-btn-container .login-btn {
+  display: inline-block;
+  width: 140px;
+}
+
+.login-btn-container .login-btn + .login-btn {
+  margin-left: 20px;
+}
